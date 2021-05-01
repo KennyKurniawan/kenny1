@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <title>Converter-Kennyk</title>  
+     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    
+    <div containerAll
+    <div class="container">
+    <p class="name">Converter Temperature</p>
+Fahrenheit
+<input type="number" name="inputNumber"placeholder="input number" oninput="ConverterTemperature(this.value)">
+
+    <p class="celcius">Celcius : 
+        <br>
+        <span id="celciusNumber">
+           
+        </span></p>
+    <p class="fahrenheit">Fahrenheit : 
+    <br>
+        <span id="FahrenheitNumber"></span></p>
+    <p class="kelvin">Kelvin : <br>
+        <span id="kelvinNumber"></span></p>
+</div>
+
+<div class="container2">
+    <p class="name">Converter Temperature</p>
+Celcius
+<input type="number" name="inputNumber"placeholder="input number" oninput="ConverterTemperature2(this.value)">
+
+    <p class="celcius">Celcius : 
+        <br>
+        <span id="celciusNumber2">
+           
+        </span></p>
+    <p class="fahrenheit">Fahrenheit : 
+    <br>
+        <span id="FahrenheitNumber2"></span></p>
+    <p class="kelvin">Kelvin : <br>
+        <span id="kelvinNumber2"></span></p>
+</div>
+
+<div class="container3">
+    <p class="name">Converter Temperature</p>
+Kelvin
+<input type="number" name="inputNumber"placeholder="input number" oninput="ConverterTemperature3(this.value)">
+</div>
+    <p class="celcius">Celcius : 
+        <br>
+        <span id="celciusNumber3">
+           
+        </span></p>
+    <p class="fahrenheit">Fahrenheit : 
+    <br>
+        <span id="FahrenheitNumber3"></span></p>
+    <p class="kelvin">Kelvin : <br>
+        <span id="kelvinNumber3"></span></p>
+</div>
+    <script>
+ function ConverterTemperature(ValueNumber){
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("FahrenheitNumber").innerHTML=(ValueNumber+0)
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("celciusNumber").innerHTML=(ValueNumber-32)/1.8
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("kelvinNumber").innerHTML=((ValueNumber-32)/1.8)+273.15
+ }     
+ function ConverterTemperature2(ValueNumber){
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("FahrenheitNumber2").innerHTML=(ValueNumber*1.8)+32
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("celciusNumber2").innerHTML=(ValueNumber+0)
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("kelvinNumber2").innerHTML=ValueNumber+273.15
+ }     
+ function ConverterTemperature3(ValueNumber){
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("FahrenheitNumber3").innerHTML=((ValueNumber-273.15)*1.8)+32
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("celciusNumber3").innerHTML=ValueNumber-273.15
+          
+          ValueNumber= parseFloat(ValueNumber);
+          document.getElementById("kelvinNumber3").innerHTML=(ValueNumber+0)
+ }     
+    </script>
 </body>
-</html>ml
+</html>
